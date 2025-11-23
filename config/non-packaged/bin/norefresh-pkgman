@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# pkgman, but don't refresh when trying to install
+
+if [[ $1 == "install" ]]; then
+	pkgman $* --no-refresh
+else
+	pkgman $*
+fi

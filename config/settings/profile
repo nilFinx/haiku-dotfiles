@@ -7,4 +7,4 @@ function inrecipe { find /boot/home/haikuports -maxdepth 3 \
 alias hp="haikuporter -S -j6 --no-source-packages --get-dependencies"
 alias ghc="gh clone"
 alias dd="dd status=progress"
-alias pkgman="/boot/home/lbin/pkgman"
+alias pkgman="norefresh-pkgman"
