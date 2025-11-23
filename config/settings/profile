@@ -1,0 +1,10 @@
+echo You just entered $(echo $SHELL | grep -oP [a-zA-Z0-9]+$).
+
+function inpatch () { grep -rni $1 /boot/home/haikuports/*/*/patches/*; }
+function inrecipe { find /boot/home/haikuports -maxdepth 3 \
+         -name "*.recipe" | xargs grep -ni --col $1; }
+
+alias hp="haikuporter -S -j6 --no-source-packages --get-dependencies"
+alias ghc="gh clone"
+alias dd="dd status=progress"
+alias pkgman="/boot/home/lbin/pkgman"
