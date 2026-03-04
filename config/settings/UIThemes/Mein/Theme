@@ -1,0 +1,399 @@
+// new BMessage
+BMessage('ZThm') {
+	z:theme:infos = BMessage(0x00000000) {
+		z:theme:name = string("Mein", 4 bytes)
+	}
+	// Desktop backgrounds and color; please respect count and ordering of all fields!
+	be:bgndimginfo = BMessage(0x00000000) {
+		// If true, use desktop color as icon text background
+		be:bgndimginfoerasetext[0] = bool(false)
+		be:bgndimginfoerasetext[1] = bool(false)
+		be:bgndimginfoerasetext[2] = bool(false)
+		// Actual backdrop image file
+		be:bgndimginfopath[0] = string("/boot/beos/etc/Backgrounds/Zeta Bugs.jpeg", 41 bytes)
+		be:bgndimginfopath[1] = string("/boot/beos/etc/Backgrounds/Zeta Bugs.jpeg", 41 bytes)
+		be:bgndimginfopath[2] = string("/ReDRIVE/Users/EggToast/Pictures/rat.PNG", 40 bytes)
+		// Workspaces each backdrop apply to
+		be:bgndimginfoworkspaces[0] = int32(4294967286 or 0xfffffff6)
+		be:bgndimginfoworkspaces[1] = int32(8 or 0x8)
+		be:bgndimginfoworkspaces[2] = int32(1 or 0x1)
+		// Origin point for mode 0
+		be:bgndimginfooffset[0] = BPoint(0.0, 0.0)
+		be:bgndimginfooffset[1] = BPoint(0.0, 0.0)
+		be:bgndimginfooffset[2] = BPoint(0.0, 0.0)
+		// image mode: 0=use_origin, 1=centered, 2=scaled, 3=tiled
+		be:bgndimginfomode[0] = int32(2 or 0x2)
+		be:bgndimginfomode[1] = int32(2 or 0x2)
+		be:bgndimginfomode[2] = int32(2 or 0x2)
+		be:bgndimginfoset[0] = int32(0 or (nil))
+		be:bgndimginfoset[1] = int32(0 or (nil))
+		be:bgndimginfoset[2] = int32(0 or (nil))
+		// one per workspace, up to the last changing one
+		be:desktop_color[0] = rgb_color(0,0,0,255)
+		be:desktop_color[1] = rgb_color(160,160,94,255)
+	}
+	// Deskbar position
+	deskbar_settings = BMessage(0x00000000) {
+		// Deskbar on-screen position
+		db:location = int32(3 or 0x3)
+		// Deskbar is expanded
+		db:expanded = bool(true)
+	}
+	// UI Settings
+	ui_settings = BMessage(0x00000000) {
+		// Panel Background
+		be:c:PanBg = rgb_color(39,15,39,255)
+		// Panel Text
+		be:c:PanTx = rgb_color(253,253,253,255)
+		// Document Background
+		be:c:DocBg = rgb_color(29,0,21,255)
+		// Document Text
+		be:c:DocTx = rgb_color(234,234,234,255)
+		// Control Background
+		be:c:CtlBg = rgb_color(25,0,50,255)
+		// Control Text
+		be:c:CtlTx = rgb_color(230,230,230,255)
+		// Control Border
+		be:c:CtlBr = rgb_color(149,149,149,255)
+		// Control Highlight
+		be:c:CtlHg = rgb_color(107,0,148,255)
+		// Control Mark
+		h:c:CtlMk = rgb_color(27,82,140,255)
+		// Navigation Base
+		be:c:NavBs = rgb_color(160,160,50,255)
+		// Navigation Pulse
+		be:c:NavPl = rgb_color(42,42,42,255)
+		// Shine
+		be:c:Shine = rgb_color(255,255,255,255)
+		// Shadow
+		be:c:Shadow = rgb_color(0,0,0,255)
+		// ToolTip Background
+		be:c:TipBg = rgb_color(215,184,255,255)
+		// ToolTip Text
+		be:c:TipTx = rgb_color(0,0,0,255)
+		// Menu Background
+		be:c:MenBg = rgb_color(47,0,47,255)
+		// Menu Selected Background
+		be:c:MenSBg = rgb_color(81,0,82,255)
+		// Menu Item Text
+		be:c:MenTx = rgb_color(255,234,255,255)
+		// Menu Selected Item Text
+		be:c:MenSTx = rgb_color(210,159,210,255)
+		// Menu Selected Border
+		be:c:MenSBr = rgb_color(0,0,0,255)
+		// Success
+		be:c:Success = rgb_color(124,193,60,255)
+		// Failure
+		be:c:Failure = rgb_color(255,0,0,255)
+		// Window Tab Background
+		h:c:WinTabBg = rgb_color(91,0,91,255)
+		// Window Tab Text
+		h:c:WinTabTx = rgb_color(255,211,255,255)
+		// Inactive Window Tab Background
+		h:c:InWinTabBg = rgb_color(43,0,43,255)
+		// Inactive Window Tab Text
+		h:c:InWinTabTx = rgb_color(255,188,255,255)
+		// Window Border
+		h:c:WinBr = rgb_color(93,93,93,255)
+		// Inactive Window Border
+		h:c:InWinBr = rgb_color(127,127,127,255)
+		// List Background
+		h:c:LstBg = rgb_color(26,0,26,255)
+		// List Selected Background
+		h:c:LstSBg = rgb_color(88,40,88,255)
+		// List Item Text
+		h:c:LstTx = rgb_color(255,209,255,255)
+		// List Selected Item Text
+		h:c:LstSTx = rgb_color(255,110,255,255)
+		// Scrollbar Thumb
+		h:c:SbThb = rgb_color(73,73,73,255)
+		// System Plain
+		be:f:be_plain_font = BFont(Noto Sans/Regular/11.00, shear=90.00, rot=0.00, height=11.76+3.22+0.00)
+		// System Bold
+		be:f:be_bold_font = BFont(Noto Sans/Regular/12.00, shear=90.00, rot=0.00, height=12.83+3.52+0.00)
+		// System Fixed
+		be:f:be_fixed_font = BFont(Noto Sans Mono/Regular/12.00, shear=90.00, rot=0.00, height=12.83+3.52+0.00)
+		// Show Menu Triggers
+		be:MenTrig = bool(false)
+		// Menu Separator
+		be:MenSep = int32(0 or (nil))
+		// Menu Item Text
+		be:f:MenTx = BFont(Noto Sans/Regular/12.00, shear=90.00, rot=0.00, height=12.83+3.52+0.00)
+	}
+	// Window decorations and scrollbars
+	window_decorations = BMessage(0x00000000) {
+		// Window decor
+		window:decor = string("Default", 7 bytes)
+		// Window decor parameters
+		window:decor_globals = BMessage(0x00000000) {
+			// Window decor parameters
+			window:decor_globals = BMessage(0x00000000) {
+				f:Inactive Title = rgb_color(255,188,255,255)
+				f:Active Title = rgb_color(255,188,255,255)
+			}
+		}
+	}
+	// Sounds Settings
+	sounds_settings = BMessage(0x00000000) {
+		BeShare-DLFinished = BMessage('SndI') {
+		}
+		BeShare-InactivChat = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/non-packaged/data/sounds/BeAIM/AIMExit.wav", 55 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		BeShare-Name Said = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/non-packaged/data/sounds/BeAIM/AIMGotWarned.wav", 60 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		BeShare-NoComplete = BMessage('SndI') {
+		}
+		BeShare-Private Msg = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/non-packaged/data/sounds/BeAIM/AIMReceive.wav", 58 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		BeShare-PrivateWndw = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/non-packaged/data/sounds/BeAIM/AIMEnter.wav", 56 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		BeShare-ULFinished = BMessage('SndI') {
+		}
+		BeShare-ULStarted = BMessage('SndI') {
+		}
+		BeShare-WatchedUser = BMessage('SndI') {
+		}
+		Beep = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Beep.ogg", 77 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Chat-o-Matic mention = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/purple/receive.wav", 43 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Chat-o-Matic message = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/purple/alert.wav", 41 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Error alert = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification error.ogg", 91 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Error notification = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification error.ogg", 91 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Important alert = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification important.ogg", 95 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Important notification = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification important.ogg", 95 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Information alert = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification information.ogg", 97 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Information notification = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification information.ogg", 97 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Key down = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Key down.ogg", 81 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Key repeat = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Key repeat.ogg", 83 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Key up = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Key up.ogg", 79 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Mouse down = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Mouse down.ogg", 83 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Mouse up = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Mouse up.ogg", 81 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		New E-mail = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/home/config/non-packaged/data/sounds/icq-mp3/IncomingMail.mp3", 67 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Notification error = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification error.ogg", 91 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Notification important = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification important.ogg", 95 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Notification information = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification information.ogg", 97 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Notification progress = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Notification progress.ogg", 94 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Progress notification = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/home/config/non-packaged/data/sounds/icq-mp3/FileTransferDone.mp3", 71 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Renga new groupchat message = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/home/config/non-packaged/data/sounds/icq-mp3/IncomingIM.mp3", 65 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Renga new message = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/home/config/non-packaged/data/sounds/icq-mp3/IncomingIM.mp3", 65 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Renga user offline = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/home/config/non-packaged/data/sounds/icq-mp3/ContactSignsOut.mp3", 70 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Renga user online = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/home/config/non-packaged/data/sounds/icq-mp3/ContactSignsIn.mp3", 69 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Startup = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Startup.ogg", 80 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		USB device mount = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Device connect.ogg", 87 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		USB device unmount = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Device disconnect.ogg", 90 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Vision Nick Notification = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/non-packaged/data/sounds/purple/alert.wav", 54 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Window activated = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Window activated.ogg", 89 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Window close = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Window close.ogg", 85 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Window minimized = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Window minimized.ogg", 89 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Window open = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Window open.ogg", 84 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Window restored = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Window restored.ogg", 88 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+		Window zoomed = BMessage('SndI') {
+			// Filename for this sound event
+			sounds:file = string("/boot/system/data/sounds/Burg's Sparkly Tones/Burg's Sparkly Tones - Window zoomed.ogg", 86 bytes)
+			// Volume for this sound event
+			sounds:volume = float(1.000000)
+		}
+	}
+	// Terminal Preferences
+	terminal_prefs = BMessage(0x00000000) {
+		// Terminal column count
+		term:cols = int32(80 or 0x50)
+		// Terminal row count
+		term:rows = int32(24 or 0x18)
+		// Terminal background color
+		term:c:bg = rgb_color(39,1,38,255)
+		// Terminal foreground color
+		term:c:fg = rgb_color(255,240,255,255)
+		// Terminal cursor background color
+		term:c:curbg = rgb_color(255,200,0,255)
+		// Terminal cursor foreground color
+		term:c:curfg = rgb_color(255,255,255,255)
+		// Terminal selection background color
+		term:c:selbg = rgb_color(70,70,70,255)
+		// Terminal selection foreground color
+		term:c:selfg = rgb_color(255,255,255,255)
+	}
+	// CLAmp/SoundPlay Skin Settings
+	winamp_skin_settings = BMessage(0x00000000) {
+	}
+}
