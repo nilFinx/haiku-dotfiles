@@ -1,6 +1,8 @@
 echo You just entered $(echo $SHELL | grep -oP [a-zA-Z0-9]+$).
 
-export PATH=$PATH:/boot/home/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin
+
+alias luarocks="luarocks --lua-version=5.1"
 
 function inpatch () { grep -rni $1 /boot/home/haikuports/*/*/patches/*; }
 function inrecipe { find /boot/home/haikuports -maxdepth 3 \
@@ -11,6 +13,6 @@ alias ghc="gh clone"
 alias dd="dd status=progress"
 alias pkgman="norefresh-pkgman"
 
-if [ -e /boot/home/config/non-packaged/bin/import_server_names ]; then
-	source /boot/home/config/non-packaged/bin/import_server_names
+if [ -e $HOME/config/non-packaged/bin/import_server_names ]; then
+	source $HOME/config/non-packaged/bin/import_server_names
 fi
