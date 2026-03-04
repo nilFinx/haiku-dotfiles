@@ -1,0 +1,6 @@
+#!/bin/bash
+
+alias rpi="ssh pi@192.168.11.103"
+alias opi="ssh orangepi@192.168.11.104"
+alias oci="ssh rocky@217.142.236.190"
+
