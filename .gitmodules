@@ -1,9 +1,0 @@
-[submodule "Desktop/wrk/hybind/template"]
-	path = Desktop/wrk/hybind/template
-	url = https://github.com/thenumbernine/lua-template
-[submodule "Desktop/wrk/hybind/include"]
-	path = Desktop/wrk/hybind/include
-	url = https://github.com/thenumbernine/include-lua
-[submodule "Desktop/wrk/hybind/ext"]
-	path = Desktop/wrk/hybind/ext
-	url = https://github.com/thenumbernine/lua-ext
