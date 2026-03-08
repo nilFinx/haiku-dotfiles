@@ -8,7 +8,7 @@ function inpatch () { grep -rni $1 /boot/home/haikuports/*/*/patches/*; }
 function inrecipe { find /boot/home/haikuports -maxdepth 3 \
          -name "*.recipe" | xargs grep -ni --col $1; }
 
-alias hp="haikuporter -S -j6 --no-source-packages --get-dependencies"
+alias hp="haikuporter -S -j$(nproc) --no-source-packages --get-dependencies"
 alias ghc="gh clone"
 alias dd="dd status=progress"
 alias pkgman="norefresh-pkgman"
